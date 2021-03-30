@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Command-line app that generates a profile page for your team.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hagenderouen/team-profile-generator.git"
+  },
+  "author": "Hagen DeRouen",
+  "license": "SEE LICENSE IN ./LICENSE",
+  "bugs": {
+    "url": "https://github.com/hagenderouen/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/hagenderouen/team-profile-generator#readme"
+}
