@@ -11,7 +11,7 @@ describe('Employee', () => {
     });
 
     describe('getName', () => {
-        it('should return the string "Mike" when "Mike" is passed in as the Employee name argument', () => {
+        it('should return the string "Mike" when "Mike" is passed in as the name argument', () => {
             const mike = new Employee('Mike');
             const expectedString = 'Mike';
 
@@ -22,7 +22,7 @@ describe('Employee', () => {
     });
 
     describe('getId', () => {
-        it('should return the number 1 when 1 is passed in as the Employee id argument', () => {
+        it('should return the number 1 when 1 is passed in as the id argument', () => {
             const mike = new Employee('Mike', 1);
             const expectedId = 1;
 
@@ -33,7 +33,7 @@ describe('Employee', () => {
     });
 
     describe('getEmail', () => {
-        it('should return the string "mike@mail.com" when "mike@mail.com" is passed in as the Employee email argument', () => {
+        it('should return the string "mike@mail.com" when "mike@mail.com" is passed in as the email argument', () => {
             const mike = new Employee('Mike', 1, 'mike@mail.com');
             const expectedString = 'mike@mail.com'
 
