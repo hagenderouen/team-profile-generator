@@ -1,3 +1,4 @@
+const Employee = require('../lib/Employee');
 
 describe('Employee', () => {
     describe('Initialization', () => {
@@ -12,8 +13,9 @@ describe('Employee', () => {
     describe('getName', () => {
         it('should return the string "Mike" when "Mike" is passed in as the Employee name argument', () => {
             const mike = new Employee('Mike');
-            const actualString = mike.getName();
             const expectedString = 'Mike';
+
+            const actualString = mike.getName();
 
             expect(actualString).toEqual(expectedString);
         });
@@ -22,8 +24,9 @@ describe('Employee', () => {
     describe('getId', () => {
         it('should return the number 1 when 1 is passed in as the Employee id argument', () => {
             const mike = new Employee('Mike', 1);
-            const actualId = mike.getId();
             const expectedId = 1;
+
+            const actualId = mike.getId();
 
             expect(actualId).toEqual(expectedId);
         });
@@ -32,8 +35,9 @@ describe('Employee', () => {
     describe('getEmail', () => {
         it('should return the string "mike@mail.com" when "mike@mail.com" is passed in as the Employee email argument', () => {
             const mike = new Employee('Mike', 1, 'mike@mail.com');
-            const actualString = mike.getEmail();
             const expectedString = 'mike@mail.com'
+
+            const actualString = mike.getEmail();
 
             expect(actualEmail).toEqual(expectedEmail);
         });
@@ -42,8 +46,9 @@ describe('Employee', () => {
     describe('getRole', () => {
         it('should return the string "Employee" when the method is called', () => {
             const employee = new Employee();
-            const actualString = employee.getRole();
             const expectedString = 'Employee';
+
+            const actualString = employee.getRole();
 
             expect(actualString).toEqual(expectedString);
         });
