@@ -3,7 +3,7 @@ const Manager = require('../lib/Manager');
 describe('Manager', () => {
     describe('Initialization', () => {
         it('should create a an object with "name" "id" "email" and "officeNumber" properties', () => {
-            const manger = new Manager();
+            const manager = new Manager();
             const expectedObj = {
                 name: undefined,
                 id: undefined,

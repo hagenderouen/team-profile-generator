@@ -39,7 +39,7 @@ describe('Employee', () => {
 
             const actualString = mike.getEmail();
 
-            expect(actualEmail).toEqual(expectedEmail);
+            expect(actualString).toEqual(expectedString);
         });
     });
 
