@@ -23,6 +23,17 @@ describe('Engineer', () => {
             const actualString = engineer.getGithub();
 
             expect(actualString).toEqual(expectedString);
-        })
-    })
-})
+        });
+    });
+
+    describe('getRole', () => {
+        it('should return the string "Engineer" when the method is called', () => {
+            const engineer = new Engineer();
+            const expectedString = 'Engineer';
+
+            const actualString = engineer.getRole();
+
+            expect(actualString).toEqual(expectedString);
+        });
+    });
+});

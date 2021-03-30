@@ -53,4 +53,4 @@ describe('Employee', () => {
             expect(actualString).toEqual(expectedString);
         });
     });
-})
+});

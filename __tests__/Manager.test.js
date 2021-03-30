@@ -23,6 +23,6 @@ describe('Manager', () => {
             const actualString = manager.getRole();
 
             expect(actualString).toEqual(expectedString);
-        })
-    })
-})
+        });
+    });
+});
