@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hagenderouen/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/hagenderouen/team-profile-generator#readme"
+  "homepage": "https://github.com/hagenderouen/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
 }
