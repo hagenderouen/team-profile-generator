@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 
 const teamNamePrompt = {
         type: 'input',
-        message: 'Enter your team name',
+        message: 'Enter your team name:',
         name: 'teamName'
     };
 
@@ -21,28 +21,28 @@ const employeePrompts = [
     },
     {
         type: 'input',
-        message: "Enter employee's name",
+        message: "Enter employee's name:",
         name: 'employeeName',
     },
     {
         type: 'input',
-        message: "Enter employee's email",
+        message: "Enter employee's email:",
         name: 'email'
     },
     {
         type: 'input',
-        message: "Enter employee's id",
+        message: "Enter employee's id:",
         name: 'id'
     },
     {
         type: 'input',
-        message: "Enter manager's office number",
+        message: "Enter manager's office number:",
         name: "officeNumber",
         when: roleChoiceIs('Manager'),
     },
     {
         type: 'input',
-        message: "Enter the intern's school",
+        message: "Enter the intern's school:",
         name: 'school',
         when: roleChoiceIs('Intern'),
     },

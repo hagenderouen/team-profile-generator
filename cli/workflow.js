@@ -1,10 +1,15 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { resolve } = require('path');
+const chalk = require('chalk');
 const { teamNamePrompt, isAddingEmployeePrompt, employeePrompts } = require('./prompts');
 const Team = require('../lib/Team');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
+const { createHtml, createStyles } = require('./elements');
+const HTML_PATH = './dist/team.html';
+const STYLE_PATH = './dist/style.css';
 
 function createEmployee(answers) {
     const { role, employeeName, id, email, officeNumber, school, username } = answers;
@@ -19,9 +24,10 @@ function createEmployee(answers) {
         default:
             console.log(`Role: ${role} not found`);
     }
-}
+};
 
-function start() { 
+function start() {
+    console.log(chalk.green('Welcome to Team Profile Generator! Please answer a few questions to get started.')); 
     let team = new Team();
  
     inquirer.prompt([teamNamePrompt])
@@ -39,7 +45,7 @@ function addEmployee(team) {
         isAddingEmployee(team)
     })
     .catch((err) => console.log(err));
-}
+};
 
 function isAddingEmployee(team) {
     inquirer.prompt([isAddingEmployeePrompt])
@@ -51,15 +57,30 @@ function isAddingEmployee(team) {
         }
     })
     .catch((err) => console.log(err));
-}
+};
 
 function end(team) {
-    console.log(team);
+    const html = createHtml(team);
+    const style = createStyles();
+    console.log(chalk.green('Writing team profile html...'));
+    fs.writeFile(HTML_PATH, html, (err) => {
+        if (err) {
+            console.log(chalk.red(err));
+        } else {
+            console.log(chalk.green(`Sucessfully wrote html file to ${resolve(HTML_PATH)}`));
+        }
+        
+    });
+    fs.writeFile(STYLE_PATH, style, (err) => {
+        if (err) {
+            console.log(chalk.red(err));
+        } else {
+            console.log(chalk.green(`Successfully wrote css file to ${resolve(STYLE_PATH)}`));
+        }
+        
+    })
 }
 
-function outputHtml() {
-    
-}
 
 module.exports = {
     createEmployee,

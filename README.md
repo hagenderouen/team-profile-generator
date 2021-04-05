@@ -1,2 +1,5 @@
 # team-profile-generator
-Command-line app that generates a profile page for your team
+Command-line app that generates a profile web page for your team.
+
+## Quick Demo
+
