@@ -1,4 +1,4 @@
-const { start } = require('./cli/workflow');
+const { start } = require('./src/workflow');
 const Team = require('./lib/Team');
 
 start();

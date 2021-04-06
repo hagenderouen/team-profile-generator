@@ -1,4 +1,4 @@
-const { createEmployee } = require('../../cli/workflow');
+const { createEmployee } = require('../../src/workflow');
 const Manager = require('../../lib/Manager');
 
 jest.mock('inquirer');
