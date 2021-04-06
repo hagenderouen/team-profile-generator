@@ -1,5 +1,8 @@
 # team-profile-generator
 Command-line app that generates a profile web page for your team.
 
-## Quick Demo
+## Usage
+`node index.js`
+
+View a [quick demo](https://youtu.be/dXsGUOfksRI)
 
